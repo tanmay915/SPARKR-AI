@@ -1,0 +1,22 @@
+{
+  "name": "sparkr-ai",
+  "version": "1.0.0",
+  "description": "SPARKR AI content strategy app with Groq Cloud generation and MongoDB persistence",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "check": "node --check server.js && node --check db.js && node --check app.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.5.2",
+    "helmet": "^8.1.0",
+    "mongodb": "^7.2.0"
+  }
+}
