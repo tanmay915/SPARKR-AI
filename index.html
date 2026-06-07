@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPARKR AI</title>
+    <!-- Modern Premium Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- NAVBAR -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="logo">SPARKR AI</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#news-hub">News</a>
+                <a href="#tools-hub">Tools</a>
+                <a href="#ideas">Ideas</a>
+                <a href="#scripts">Scripts</a>
+                <a href="#calendar">Planner</a>
+                <a href="#saved">Saved</a>
+            </div>
+            <div class="nav-right">
+                <button class="nav-cta">TRY FOR FREE &rarr;</button>
+                <div class="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-nav">
+            <div class="mobile-nav-group">NAVIGATION</div>
+            <a href="#home">Home</a>
+            <a href="#news-hub">News</a>
+            <a href="#tools-hub">Tools</a>
+            <a href="#ideas">Ideas</a>
+            <a href="#scripts">Scripts</a>
+            <a href="#calendar">Planner</a>
+            <a href="#saved">Saved</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header id="home" class="hero">
+        <!-- Floating glowing orbs -->
+        <div class="hero-orb orb-1"></div>
+        <div class="hero-orb orb-2"></div>
+        <div class="hero-orb orb-3"></div>
+        
+        <div class="hero-container">
+            <div class="hero-pill">&compfn; AI-POWERED CONTENT STRATEGY</div>
+            <h1 class="hero-title">
+                YOUR NEXT VIRAL IDEA<br>
+                <span class="text-orange">STARTS RIGHT HERE.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Stop staring at a blank page. SPARKR AI generates niche-specific content ideas, platform-ready hooks, and fully humanized scripts &mdash; in under 10 seconds.
+            </p>
+            <div class="hero-actions">
+                <button class="btn btn-orange-fill" id="hero-generate-btn">⚡ GENERATE MY IDEAS</button>
+                <button class="btn btn-transparent">SEE HOW IT WORKS</button>
+            </div>
+            <p class="social-proof">Trusted by 3,200+ creators across YouTube, Instagram & LinkedIn</p>
+            
+            <div class="hero-decorative-cards">
+                <div class="deco-card">🎥 Tech Reviews</div>
+                <div class="deco-card">🏋️ Fitness</div>
+                <div class="deco-card">🍕 Food Vlogs</div>
+                <div class="deco-card">💡 Education</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- FEATURES SECTION -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="eyebrow">WHAT SPARKR DOES</div>
+            <h2 class="section-heading">
+                EVERYTHING A CREATOR<br>
+                NEEDS TO <span class="text-orange">GROW FASTER.</span>
+            </h2>
+            <div class="features-grid">
+                <div class="feature-card card-blue">
+                    <div class="feature-icon icon-blue">💡</div>
+                    <h3>IDEA ENGINE</h3>
+                    <p>Tell us your niche. We generate 10+ content ideas tailored to your platform, audience, and tone — not generic filler that everyone's already posted.</p>
+                </div>
+                <div class="feature-card card-orange">
+                    <div class="feature-icon icon-white">✍️</div>
+                    <h3>HUMAN SCRIPT WRITER</h3>
+                    <p>Our AI doesn't write like a robot. You get Hook &rarr; Story &rarr; Value &rarr; CTA — with real pauses, emotion cues, and a tone that sounds like you.</p>
+                </div>
+                <div class="feature-card card-dark">
+                    <div class="feature-icon icon-dim">📅</div>
+                    <h3>CONTENT CALENDAR</h3>
+                    <p>Drag your saved ideas onto a weekly planner. Schedule a full month of content in 5 minutes — then stop worrying about what to post.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CREATOR OS SECTION -->
+    <section id="creator-os" class="section-creator-os">
+        <div class="container">
+            <div id="news-hub" class="creator-subsection">
+                <div class="eyebrow">LIVE NEWS + VIRAL UPDATES</div>
+                <h2 class="section-heading creator-subheading">TREND INTELLIGENCE AND DAILY VIRAL SIGNALS</h2>
+                <div class="creator-os-grid">
+                    <div class="tool-card">
+                        <div class="tool-head">
+                            <h3>Trend Intelligence</h3>
+                            <button class="btn btn-grey-outline tool-btn" id="refresh-trends-btn">REFRESH</button>
+                        </div>
+                        <div class="filter-row" id="trend-source-filters">
+                            <button class="filter-pill active" data-source="all">All</button>
+                            <button class="filter-pill" data-source="google_trends">Google</button>
+                            <button class="filter-pill" data-source="reddit">Reddit</button>
+                            <button class="filter-pill" data-source="youtube">YouTube</button>
+                            <button class="filter-pill" data-source="instagram">Instagram</button>
+                            <button class="filter-pill" data-source="x">X</button>
+                        </div>
+                        <div id="trends-output" class="tool-output"></div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-head">
+                            <h3>Daily Viral Ideas Feed</h3>
+                            <button class="btn btn-grey-outline tool-btn" id="refresh-daily-feed-btn">REFRESH</button>
+                        </div>
+                        <div class="filter-row" id="daily-feed-source-filters">
+                            <button class="filter-pill active" data-source="all">All</button>
+                            <button class="filter-pill" data-source="google_trends">Google</button>
+                            <button class="filter-pill" data-source="reddit">Reddit</button>
+                            <button class="filter-pill" data-source="youtube">YouTube</button>
+                            <button class="filter-pill" data-source="instagram">Instagram</button>
+                            <button class="filter-pill" data-source="x">X</button>
+                        </div>
+                        <div id="daily-feed-output" class="tool-output"></div>
+                    </div>
+
+                    <div class="tool-card tool-card-wide">
+                        <div class="tool-head">
+                            <h3>Feed Archive</h3>
+                            <span class="tool-badge">Last 5</span>
+                        </div>
+                        <div class="filter-row" id="daily-feed-archive-source-filters">
+                            <button class="filter-pill active" data-source="all">All</button>
+                            <button class="filter-pill" data-source="google_trends">Google</button>
+                            <button class="filter-pill" data-source="reddit">Reddit</button>
+                            <button class="filter-pill" data-source="youtube">YouTube</button>
+                            <button class="filter-pill" data-source="instagram">Instagram</button>
+                            <button class="filter-pill" data-source="x">X</button>
+                        </div>
+                        <div id="daily-feed-history-output" class="tool-output"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tools-hub" class="creator-subsection creator-tools-subsection">
+                <div class="eyebrow">CREATOR TOOLS</div>
+                <h2 class="section-heading creator-subheading">GENERATORS, REPURPOSERS, SCORING AND WRITING HELPERS</h2>
+                <div class="creator-os-grid">
+                    <div class="tool-card">
+                        <div class="tool-head">
+                            <h3>Viral Hook Generator</h3>
+                            <button class="btn btn-orange-fill tool-btn" id="generate-hooks-btn">GENERATE</button>
+                        </div>
+                        <input id="hook-title" class="tool-input" placeholder="Enter a content idea">
+                        <div class="tool-row">
+                            <select id="hook-platform" class="script-select">
+                                <option>YouTube</option><option>Reels</option><option>LinkedIn</option><option>Shorts</option>
+                            </select>
+                            <select id="hook-tone" class="script-select">
+                                <option>Casual</option><option>Funny</option><option>Professional</option><option>Energetic</option><option>Storytelling</option>
+                            </select>
+                        </div>
+                        <div id="hooks-output" class="tool-output"></div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-head">
+                            <h3>Thumbnail + Title Generator</h3>
+                            <button class="btn btn-orange-fill tool-btn" id="generate-title-pack-btn">GENERATE</button>
+                        </div>
+                        <input id="title-pack-input" class="tool-input" placeholder="Enter a video topic">
+                        <select id="title-pack-tone" class="script-select">
+                            <option>Casual</option><option>Funny</option><option>Professional</option><option>Energetic</option><option>Storytelling</option>
+                        </select>
+                        <div id="title-pack-output" class="tool-output"></div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-head">
+                            <h3>Multi-Platform Repurposer</h3>
+                            <button class="btn btn-orange-fill tool-btn" id="generate-repurpose-btn">GENERATE</button>
+                        </div>
+                        <textarea id="repurpose-input" class="tool-textarea" placeholder="Enter a content idea or rough summary"></textarea>
+                        <select id="repurpose-tone" class="script-select">
+                            <option>Casual</option><option>Funny</option><option>Professional</option><option>Energetic</option><option>Storytelling</option>
+                        </select>
+                        <div id="repurpose-output" class="tool-output"></div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-head">
+                            <h3>Content Scoring</h3>
+                            <button class="btn btn-grey-outline tool-btn" id="analyze-idea-btn">ANALYZE</button>
+                        </div>
+                        <input id="score-input" class="tool-input" placeholder="Paste a title or idea">
+                        <div id="score-output" class="tool-output"></div>
+                    </div>
+
+                    <div class="tool-card tool-card-wide tool-card-centered">
+                        <div class="tool-head">
+                            <h3>Caption & Hashtag Generator</h3>
+                            <button class="btn btn-orange-fill tool-btn" id="generate-caption-btn">GENERATE</button>
+                        </div>
+                        <input id="caption-input" class="tool-input" placeholder="Enter a post topic">
+                        <div class="tool-row">
+                            <select id="caption-platform" class="script-select">
+                                <option>Instagram</option><option>YouTube</option><option>LinkedIn</option><option>Twitter</option>
+                            </select>
+                            <select id="caption-tone" class="script-select">
+                                <option>Casual</option><option>Funny</option><option>Professional</option><option>Energetic</option><option>Storytelling</option>
+                            </select>
+                        </div>
+                        <div id="caption-output" class="tool-output"></div>
+                    </div>
+
+                    <div class="tool-card tool-card-wide">
+                        <div class="tool-head">
+                            <h3>Prompt Enhancer</h3>
+                            <button class="btn btn-orange-fill tool-btn" id="enhance-prompt-btn">ENHANCE</button>
+                        </div>
+                        <textarea id="prompt-input" class="tool-textarea" placeholder="Paste a weak prompt here and make it better"></textarea>
+                        <div id="prompt-output" class="tool-output"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IDEA GENERATOR SECTION -->
+    <section id="ideas" class="section-ideas">
+        <div class="container">
+            <div class="generator-input-card">
+                <label for="niche-input" class="input-label">WHAT'S YOUR NICHE? LET'S GENERATE.</label>
+                <div class="input-row">
+                    <input type="text" id="niche-input" placeholder="e.g. tech reviews, fitness, skincare, finance tips...">
+                    <button class="btn btn-blue" id="generate-ideas-btn">GENERATE &rarr;</button>
+                </div>
+                
+                <div class="selector-row">
+                    <div class="selector-group" id="platform-selector">
+                        <button class="toggle-pill active" data-value="YouTube">YouTube</button>
+                        <button class="toggle-pill" data-value="Reels">Reels</button>
+                        <button class="toggle-pill" data-value="LinkedIn">LinkedIn</button>
+                        <button class="toggle-pill" data-value="Podcast">Podcast</button>
+                        <button class="toggle-pill" data-value="Shorts">Shorts</button>
+                    </div>
+                </div>
+                <div class="selector-row">
+                    <div class="selector-group" id="tone-selector">
+                        <button class="toggle-pill active" data-value="Casual">Casual 🗣️</button>
+                        <button class="toggle-pill" data-value="Funny">Funny 😄</button>
+                        <button class="toggle-pill" data-value="Professional">Professional 💼</button>
+                        <button class="toggle-pill" data-value="Energetic">Energetic 🔥</button>
+                        <button class="toggle-pill" data-value="Storytelling">Storytelling 🎙️</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ideas-results" class="ideas-grid">
+                <!-- Dynamic idea cards go here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SCRIPT GENERATOR SECTION -->
+    <section id="scripts" class="section-scripts">
+        <div class="container">
+            <div class="script-workspace">
+                <div class="script-header">
+                    <h2 class="script-title">SCRIPT PREVIEW</h2>
+                    <span class="badge-humanized">HUMANIZED ON ✓</span>
+                </div>
+                
+                <div class="script-controls">
+                    <input type="text" id="script-idea-title" placeholder="Idea Title to Script...">
+                    <div class="control-row">
+                        <select id="script-length" class="script-select">
+                            <option value="30 sec">30 sec</option>
+                            <option value="60 sec">60 sec</option>
+                            <option value="3 min">3 min</option>
+                            <option value="5-8 min">5–8 min</option>
+                        </select>
+                        <select id="script-tone" class="script-select">
+                            <option value="Casual">Casual</option>
+                            <option value="Funny">Funny</option>
+                            <option value="Professional">Professional</option>
+                            <option value="Energetic">Energetic</option>
+                            <option value="Storytelling">Storytelling</option>
+                        </select>
+                        <button class="btn btn-orange-fill" id="generate-script-btn">GENERATE SCRIPT &rarr;</button>
+                    </div>
+                </div>
+
+                <div id="script-output" class="script-output-area">
+                    <!-- Script sections go here -->
+                </div>
+
+                <div class="script-footer">
+                    <div class="script-stats">
+                        <span id="script-word-count">📝 0 words</span>
+                        <span id="script-duration">⏱️ 0:00</span>
+                    </div>
+                    <div class="script-actions">
+                        <button class="btn btn-grey-outline" id="remix-btn">↻ REMIX</button>
+                        <button class="btn btn-grey-outline" id="copy-btn">📋 COPY</button>
+                        <button class="btn btn-orange-fill" id="export-pdf-btn">⬇ EXPORT PDF</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT CALENDAR SECTION -->
+    <section id="calendar" class="section-calendar">
+        <div class="container">
+            <div class="eyebrow">PLAN YOUR WEEK</div>
+            <h2 class="section-heading">DRAG IDEAS INTO YOUR CONTENT CALENDAR</h2>
+            
+            <div class="calendar-layout">
+                <div class="calendar-sidebar">
+                    <h3>SAVED IDEAS</h3>
+                    <div id="calendar-chips" class="chip-container">
+                        <!-- Draggable chips go here -->
+                    </div>
+                </div>
+                
+                <div class="calendar-grid">
+                    <div class="day-column">
+                        <div class="day-label">MON</div>
+                        <div class="drop-zone" data-day="mon"></div>
+                    </div>
+                    <div class="day-column">
+                        <div class="day-label">TUE</div>
+                        <div class="drop-zone" data-day="tue"></div>
+                    </div>
+                    <div class="day-column">
+                        <div class="day-label">WED</div>
+                        <div class="drop-zone" data-day="wed"></div>
+                    </div>
+                    <div class="day-column">
+                        <div class="day-label">THU</div>
+                        <div class="drop-zone" data-day="thu"></div>
+                    </div>
+                    <div class="day-column">
+                        <div class="day-label">FRI</div>
+                        <div class="drop-zone" data-day="fri"></div>
+                    </div>
+                    <div class="day-column">
+                        <div class="day-label">SAT</div>
+                        <div class="drop-zone" data-day="sat"></div>
+                    </div>
+                    <div class="day-column">
+                        <div class="day-label">SUN</div>
+                        <div class="drop-zone" data-day="sun"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="planner-controls">
+                <input type="text" id="planner-title-input" class="planner-input" placeholder="Select a saved idea or type your own idea">
+                <select id="planner-day-select" class="script-select planner-day-select">
+                    <option value="mon">Monday</option>
+                    <option value="tue">Tuesday</option>
+                    <option value="wed">Wednesday</option>
+                    <option value="thu">Thursday</option>
+                    <option value="fri">Friday</option>
+                    <option value="sat">Saturday</option>
+                    <option value="sun">Sunday</option>
+                </select>
+                <button class="btn btn-blue" id="planner-add-btn">ADD TO CALENDAR</button>
+                <button class="btn btn-grey-outline clear-cal-btn" id="clear-week-btn">CLEAR WEEK</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAVED IDEAS SECTION -->
+    <section id="saved" class="section-saved">
+        <div class="container">
+            <h2 class="section-heading">YOUR SAVED IDEAS</h2>
+            <div id="saved-ideas-grid" class="ideas-grid">
+                <div class="empty-state" id="saved-empty-state">
+                    <div class="empty-icon">📁</div>
+                    <p>Nothing saved yet. Go generate some fire ideas &uarr;</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50000">0</div>
+                    <div class="stat-label">IDEAS GENERATED</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="12000">0</div>
+                    <div class="stat-label">SCRIPTS WRITTEN</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="3200">0</div>
+                    <div class="stat-label">CREATORS USING SPARKR</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- THEME TOGGLE -->
+    <button id="theme-toggle" class="theme-toggle">
+        <span class="icon-moon">🌙</span>
+        <span class="icon-sun">☀️</span>
+    </button>
+
+    <!-- TOAST -->
+    <div id="toast" class="toast">Copied! ✓</div>
+
+    <!-- FEED ARCHIVE MODAL -->
+    <div id="feed-archive-modal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="feed-archive-modal-title">
+            <div class="modal-head">
+                <div>
+                    <div class="tool-badge">Daily Viral Ideas Archive</div>
+                    <h3 id="feed-archive-modal-title">Snapshot Details</h3>
+                </div>
+                <button class="modal-close" id="feed-archive-close-btn" aria-label="Close archive snapshot">×</button>
+            </div>
+            <div id="feed-archive-modal-meta" class="modal-meta"></div>
+            <div id="feed-archive-modal-content" class="modal-content"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
